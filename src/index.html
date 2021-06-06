@@ -11,14 +11,14 @@
 <body>
 
     <main>
-        <section class="container first">
-            <div class="first__part">
+        <section class="first" style="background-image: url('images/Group499.svg');">
+            <div class="container first__part">
                 <div class="row justify-content-center">
                     <div class="container__header col">
                         <h1 class="container__title">Lorem ipsum set dolore amet duis sir class!</h1>
                     </div>
                 </div>
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="first__text col-md">
                     <span class="first__text--span">
                         Duis sit amet erat non velit rhoncus sollicitudin. Aenean ultrices ornare ligula, eu tristique nisi tincidunt et. Ut sed lacus turpis. Suspendisse tincidunt blandit mauris non aliquet. Mauris dignissim, eros ut consectetur ullamcorper, magna tellus cursus lorem, eget pharetra justo mauris in dui. Fusce eget mauris sit amet sapien posuere vulputate eget ac nunc. In vitae feugiat turpis, eget semper ipsum. Vivamus convallis ornare nisi in elementum.
@@ -35,8 +35,8 @@
             </div>
         </div>
         </section>
-        <section class="container second">
-        <div class="second__part">
+        <section class="second">
+        <div class="container second__part" style="background-image: url('images/Group500.svg');">
             <div class="row justify-content-center">
                 <div class="container__chapter col">
                     <h2 class="container__chapter__title">Jak możesz się dołożyć?</h2>
@@ -44,19 +44,19 @@
             </div>
             <div class="row justify-content-around">
                 <div class="stage col-sm">
-                  <span class="stage--number">1</span><br><br>
+                  <p class="stage--number">1</p>
                   <p class="stage--desc">Vestibulum est tortor, fringilla eu imperdiet sit amet, pellentesque sed ante. Praesent vel nibh vitae nisi ornare facilisis.</p>
                 </div>
                 <div class="stage col-sm">
-                  <span class="stage--number">2</span><br><br>
+                  <p class="stage--number">2</p>
                   <p class="stage--desc">Vestibulum est tortor, fringilla eu imperdiet sit amet, pellentesque sed ante. Praesent vel nibh vitae nisi ornare facilisis.</p>
                 </div>
                 <div class="stage col-sm">
-                  <span class="stage--number">3</span><br><br>
+                  <p class="stage--number">3</p>
                   <p class="stage--desc">Tiam sed gravida nulla. Nam non lobortis ipsum. Donec ut porta leo.</p>
                 </div>
                 <div class="stage col-sm">
-                  <span class="stage--number">4</span><br><br>
+                  <p class="stage--number">4</p>
                   <p class="stage--desc">Tiam sed gravida nulla. Nam non lobortis ipsum. Donec ut porta leo.</p>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     <h3 class="container__mini__title">Wybierz kwotę</h3>
                 </div>
             </div>
-            <div class="row justify-content-around">
+            <div class="row justify-content-around amount__choice">
                 <div class="amount col-sm">
                     <button class="amount__value" type="button">50 ZŁ</button>
                 </div>
@@ -86,32 +86,41 @@
                     <h3 class="container__mini__title">Dane do wysyłki</h3>
                 </div>
             </div>
-               <form>
+               <form class="shipping">
                 <div class="row justify-content-center">
-                    <div class="col-md">
+                    <div class="shipping__form col-md">
                         <input type="text" class="required" id="fullname" name="fullname" placeholder="imię nazwisko"><br><br>
                         <input type="email" class="required" id="email" name="email" placeholder="adres e-mail"><br><br>
-                        <input type="tel" class="required" id="phone" name="phone" placeholder="telefon" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+                        <input type="tel" class="required" id="phone" name="phone" placeholder="telefon" pattern="[0-9]{9}"><br><br>
                     </div>
-                    <div class="col-md">
+                    <div class="shipping__form col-md">
                         <input type="text" class="required" id="street" name="street" placeholder="ulica"><br><br>
                         <input type="text" class="required" id="city" name="city" placeholder="miasto"><br><br>
-                        <input type="text" class="required" id="postal_code" name="postal_code" placeholder="kod pocztowy"><br><br>
+                        <input type="text" class="required" id="postal_code" name="postal_code" placeholder="kod pocztowy" pattern="[0-9]{2}-[0-9]{3}"><br><br>
                     </div>
                 </div>
-                <input type="checkbox" id="rodo" name="rodo">
-                <label for="rodo">Wyrażam zgodę na przetwa..... tekst RODO</label><br><br>
-                <button type="submit" name="send" id="send" disabled="disabled" value="WSPIERAM">WSPIERAM</button>
+                    <div class="code">
+                        <p class="code__text">Twój unikalny kod: #143256</p>
+                    </div>
+                    <div class="rodo__info">
+                        <input type="checkbox" id="rodo" name="rodo">
+                        <label for="rodo">Wyrażam zgodę na przetwa..... tekst RODO</label><br><br>
+                    </div>
+                    <div class="fill__field">
+                        <p class="fill__fields--info">Uzupełnij brakujące pola!</p>
+                    </div>
+                <button type="button" name="send" id="send" disabled="disabled" value="WSPIERAM">WSPIERAM</button>
                </form>
         </div>
         </section>
     </main>
     <footer>
-        <section class="container third">
-            <div class="third__part">
-                <div class="row justify-content-between">
+        <section class="third">
+            <div class="container third__part">
+                <div class="row justify-content-between third__part__elements">
                     <div class="container__choice col">
-                        <ul class="container__choice__title">Poprzednie edycje:
+                        <p class="container__choice--title">Poprzednie edycje:</p>
+                        <ul class="container__choice--edition">
                             <li><a href="">Edycja pierwsza</a></li>
                             <li><a href="">Edycja druga</a></li>
                             <li><a href="">Edycja trzecia</a></li>
@@ -119,8 +128,8 @@
                     </div>
                     <div class="social col">
                         <ul class="social__icons">
-                            <li><a href="">F</a></li>
-                            <li><a href="">I</a></li>
+                            <li><a href="https://www.facebook.com"><img src="./images/facebook.svg" alt="facebook"></a></li>
+                            <li><a href="https://www.instagram.com"><img src="./images/instagram.svg" alt="instagram"></a></li>
                         </ul>
                     </div>
                 </div>
