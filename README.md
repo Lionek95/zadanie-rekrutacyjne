@@ -11,5 +11,10 @@ Webpack was used to convert files.
 
 Command to run the project:
 
-'npx webpack serve'
+`npx webpack serve`
 
+Used port:
+
+`port: 9000`
+
+[http://localhost:9000]
