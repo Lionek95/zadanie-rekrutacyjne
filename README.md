@@ -11,5 +11,5 @@ Webpack was used to convert files.
 
 Command to run the project:
 
-npx webpack serve
+'npx webpack serve'
 
