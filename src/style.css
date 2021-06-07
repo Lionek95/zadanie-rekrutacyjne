@@ -230,17 +230,17 @@ footer {
   .first__photo__column img {
     margin-top: 0%;
   }
-  .amount {
+  .amount__choice {
     margin: 5% auto;
   }
-  .amount__choice {
+  .amount {
     display: grid;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 576px) {
-  .amount {
+  .amount__choice {
     flex-grow: 0 !important;
   }
 }

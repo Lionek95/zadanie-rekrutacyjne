@@ -4,6 +4,7 @@
 $primary-color: #3E4555;
 $secondary-color: #8D97AD;
 $tertiary-color: #29AF8A;
+$quaternary-color: #E2536B;
 
 $primary-font: 'Playfair Display', serif;
 $secondary-font: 'Lato', sans-serif;
@@ -52,7 +53,6 @@ p, span, a, ul, li {
     background-position: left top;
 }
 
-
 .first__part {
     margin-bottom: 15%;
 }
@@ -90,7 +90,7 @@ p, span, a, ul, li {
 }
 
 .stage--number {
-    color: #E2536B !important;
+    color: $quaternary-color !important;
     $size: 88px;
     width: $size;
     height: $size;
@@ -109,20 +109,16 @@ p, span, a, ul, li {
     margin-bottom: 5%;
 }
 
-
 .amount__value {
     width: 277px;
     height: 87px;
     background: none;
     font-size: 40px !important;
     line-height: 2;
-    border: 4px solid #E2536B;
+    border: 4px solid $quaternary-color;
     border-radius: 5px;
-    color: #E2536B;
-}
+    color: $quaternary-color;
 
-
-.amount__value {
     &:hover {
         background: $tertiary-color;
         border: 4px solid $tertiary-color;
@@ -157,7 +153,7 @@ p, span, a, ul, li {
 }
 
 .error {
-    border: 2px solid #E2536B;
+    border: 2px solid $quaternary-color;
 } 
 
 .code__text {
@@ -169,7 +165,7 @@ p, span, a, ul, li {
 .fill__fields--info {
     text-align: center;
     font-size: 21px !important;
-    color: #E2536B !important;
+    color: $quaternary-color !important;
     display: none;
 }
 
@@ -258,11 +254,11 @@ footer {
         margin-top: 0%;
     }
 
-    .amount {
+    .amount__choice {
         margin: 5% auto;
     }
 
-    .amount__choice {
+    .amount {
         display: grid;
         margin: 0 auto;
     }
@@ -270,12 +266,11 @@ footer {
 }
 
 @media (min-width: $breakpoint-phone) {
-    .amount {
+    .amount__choice {
         flex-grow: 0 !important;
     }
 
 }
-  
 
 @media (max-width: $breakpoint-tablet) {
     h1, h2 {

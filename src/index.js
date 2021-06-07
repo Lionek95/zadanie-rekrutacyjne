@@ -28,9 +28,6 @@ $(function(){
   });
 });
 
-
-
-
 $(function(){
   $('input[type="checkbox"]').on('click', function(){
     if($(this).prop('checked') == true) {
