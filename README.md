@@ -15,6 +15,14 @@ Webpack was used to convert files.
 
 Command to run the project:
 
+`npm install`
+
+Build the website:
+
+`npm run build`
+
+Run the server:
+
 `npx webpack serve`
 
 Used port:
