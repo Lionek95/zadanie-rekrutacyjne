@@ -59,6 +59,7 @@ p, span, a, ul, li {
 
 .first__text {
     max-width: 41%;
+    align-self: center;
 
     p {
         font-size: 27px !important;
@@ -71,12 +72,6 @@ p, span, a, ul, li {
         font-size: 16px !important;
         font-family: $secondary-font !important;
         line-height: 26px !important;
-    }
-}
-
-.first__photo__column {
-    img {
-        margin-top: -10%;
     }
 }
 
@@ -236,6 +231,7 @@ footer {
 
     .first__photo {
         flex-grow: 0 !important;
+        align-self: center !important;
     }
 }
 
@@ -250,10 +246,6 @@ footer {
         margin: 5% auto;
     }
 
-    .first__photo__column img {
-        margin-top: 0%;
-    }
-
     .amount__choice {
         margin: 5% auto;
     }
@@ -261,6 +253,20 @@ footer {
     .amount {
         display: grid;
         margin: 0 auto;
+    }
+
+    .container__choice--edition {
+
+            padding-inline-start: 0px !important;
+            justify-content: space-between;
+
+            li {
+                margin-left: 0 !important;
+
+                a {
+                    font-size: 12px !important;
+                }
+            }
     }
     
 }
@@ -305,7 +311,8 @@ footer {
 
     .first__photo__column {
         img {
-            margin-top: 0%;
+            margin: 0 auto;
+            width: 100%;
         }
     }
 
