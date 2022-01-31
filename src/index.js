@@ -10,39 +10,62 @@ $(function(){
   });
 });
 
-//Form validation
+//Reset the choice of the amount with the support button alert
 
 $(function(){
-  $('.shipping input').on('blur', function(){
-      if(!$(this).val()){
-          $(this).addClass('error');
-      } else{
-          $(this).removeClass('error');
-      }
-
-      if(!$(this).val()){
-        $('.fill__fields--info').css('display', 'block');
-      } else{
-        $('.fill__fields--info').css('display', 'none');
-      }
+  $('.support__button').on('click', function(){
+    $('.amount__value').not(this).removeClass('active');
   });
 });
 
+
+//Support button alert
+
 $(function(){
-  $('input[type="checkbox"]').on('click', function(){
-    if($(this).prop('checked') == true) {
-      $('#send').removeAttr('disabled');
-    }
-    else if($(this).prop('checked') == false) {
-      $('#send').attr('disabled', 'disabled');
-    }
+  $('.support__button').on('click', function(){
+    alert('Dziękujemy za wpłatę!');
   });
 });
 
-//The code after submition
+//Slider
 
-$(function(){
-  $('#send').on('click', function(){
-    $('.code__text').css('display', 'block');
+$(function() {
+  
+  var slideCount =  $(".slider ul li").length;
+  var slideWidth =  $(".slider ul li").width();
+  var slideHeight =  $(".slider ul li").height();
+  var slideUlWidth =  slideCount * slideWidth;
+  
+  $(".slider").css({"max-width":slideWidth, "height": slideHeight});
+  $(".slider ul").css({"width":slideUlWidth });
+  $(".slider ul li:last-child").prependTo($(".slider ul"));
+  
+  function moveLeft() {
+    $(".slider ul").finish().animate({
+      left: + slideWidth
+    },700, function() {
+      $(".slider ul li:last-child").prependTo($(".slider ul"));
+      $(".slider ul").css("left","");
+    });
+  }
+  
+  function moveRight() {
+    $(".slider ul").finish().animate({
+      left: - slideWidth
+    },700, function() {
+      $(".slider ul li:first-child").appendTo($(".slider ul"));
+      $(".slider ul").css("left","");
+    });
+  }
+  
+  
+  $(".next").on("click",function(){
+    moveRight();
   });
+  
+  $(".prev").on("click",function(){
+    moveLeft();
+  });
+  
+  
 });
